@@ -40,32 +40,191 @@ $(document).ready(function () {
     }
 
    //color rows based on time of day 
-   function updateRowColor() {
+   function updateRowColor9() {
     // set variable to current hour (military)
-    let currentHour = moment().format('HH');
-    let rowHour = $('textarea').data('hour');
+    let currentHour = eval(moment().format('HH'));
+    let rowHour9 = eval($('#hour9 textarea').data('hour'));
     // loop through each row of the class (time-block)
      // find row time using data attribute (9<21 hours)
      // add the past class to $(this).addClass('past')
-    if (rowHour < currentHour) {
+    if (rowHour9 < currentHour) {
         // color set to "past" class
-    } else if (hour = currentHour) {
+        $('#hour9 #sched-text').addClass('past');
+    } else if (rowHour9 > currentHour) {
         // color set to "present" class
-
+        $('#hour9 #sched-text').addClass('future');
     } else {
         // color set to "future" class
+        $('#hour9 #sched-text').addClass('present');
     }
    }
     
+   function updateRowColor10() {
+    // set variable to current hour (military)
+    let currentHour = eval(moment().format('HH'));
+    let rowHour10 = eval($('#hour10 textarea').data('hour'));
+    // loop through each row of the class (time-block)
+     // find row time using data attribute (9<21 hours)
+     // add the past class to $(this).addClass('past')
+    if (rowHour10 < currentHour) {
+        // color set to "past" class
+        $('#hour10 #sched-text').addClass('past');
+    } else if (rowHour10 > currentHour) {
+        // color set to "present" class
+        $('#hour10 #sched-text').addClass('future');
+    } else {
+        // color set to "future" class
+        $('#hour10 #sched-text').addClass('present');
+    }
+   }
 
+   function updateRowColor11() {
+    // set variable to current hour (military)
+    let currentHour = eval(moment().format('HH'));
+    let rowHour11 = eval($('#hour11 textarea').data('hour'));
+    // loop through each row of the class (time-block)
+     // find row time using data attribute (9<21 hours)
+     // add the past class to $(this).addClass('past')
+    if (rowHour11 < currentHour) {
+        // color set to "past" class
+        $('#hour11 #sched-text').addClass('past');
+    } else if (rowHour11 > currentHour) {
+        // color set to "present" class
+        $('#hour11 #sched-text').addClass('future');
+    } else {
+        // color set to "future" class
+        $('#hour11 #sched-text').addClass('present');
+    }
+   }
+
+   function updateRowColor12() {
+    // set variable to current hour (military)
+    let currentHour = eval(moment().format('HH'));
+    let rowHour12 = eval($('#hour12 textarea').data('hour'));
+    // loop through each row of the class (time-block)
+     // find row time using data attribute (9<21 hours)
+     // add the past class to $(this).addClass('past')
+    if (rowHour12 < currentHour) {
+        // color set to "past" class
+        $('#hour12 #sched-text').addClass('past');
+    } else if (rowHour12 > currentHour) {
+        // color set to "present" class
+        $('#hour12 #sched-text').addClass('future');
+    } else {
+        // color set to "future" class
+        $('#hour12 #sched-text').addClass('present');
+    }
+   }
    
+   function updateRowColor13() {
+    // set variable to current hour (military)
+    let currentHour = eval(moment().format('HH'));
+    let rowHour13 = eval($('#hour13 textarea').data('hour'));
+    // loop through each row of the class (time-block)
+     // find row time using data attribute (9<21 hours)
+     // add the past class to $(this).addClass('past')
+    if (rowHour13 < currentHour) {
+        // color set to "past" class
+        $('#hour13 #sched-text').addClass('past');
+    } else if (rowHour13 > currentHour) {
+        // color set to "present" class
+        $('#hour13 #sched-text').addClass('future');
+    } else {
+        // color set to "future" class
+        $('#hour13 #sched-text').addClass('present');
+    }
+   }
+
+   function updateRowColor14() {
+    // set variable to current hour (military)
+    let currentHour = eval(moment().format('HH'));
+    let rowHour14 = eval($('#hour14 textarea').data('hour'));
+    // loop through each row of the class (time-block)
+     // find row time using data attribute (9<21 hours)
+     // add the past class to $(this).addClass('past')
+    if (rowHour14 < currentHour) {
+        // color set to "past" class
+        $('#hour14 #sched-text').addClass('past');
+    } else if (rowHour14 > currentHour) {
+        // color set to "present" class
+        $('#hour14 #sched-text').addClass('future');
+    } else {
+        // color set to "future" class
+        $('#hour14 #sched-text').addClass('present');
+    }
+   }
+
+   function updateRowColor15() {
+    // set variable to current hour (military)
+    let currentHour = eval(moment().format('HH'));
+    let rowHour15 = eval($('#hour15 textarea').data('hour'));
+    // loop through each row of the class (time-block)
+     // find row time using data attribute (9<21 hours)
+     // add the past class to $(this).addClass('past')
+    if (rowHour15 < currentHour) {
+        // color set to "past" class
+        $('#hour15 #sched-text').addClass('past');
+    } else if (rowHour15 > currentHour) {
+        // color set to "present" class
+        $('#hour15 #sched-text').addClass('future');
+    } else {
+        // color set to "future" class
+        $('#hour15 #sched-text').addClass('present');
+    }
+   }
+
+   function updateRowColor16() {
+    // set variable to current hour (military)
+    let currentHour = eval(moment().format('HH'));
+    let rowHour16 = eval($('#hour16 textarea').data('hour'));
+    // loop through each row of the class (time-block)
+     // find row time using data attribute (9<21 hours)
+     // add the past class to $(this).addClass('past')
+    if (rowHour16 < currentHour) {
+        // color set to "past" class
+        $('#hour16 #sched-text').addClass('past');
+    } else if (rowHour16 > currentHour) {
+        // color set to "present" class
+        $('#hour16 #sched-text').addClass('future');
+    } else {
+        // color set to "future" class
+        $('#hour16 #sched-text').addClass('present');
+    }
+   }
+
+   function updateRowColor17() {
+    // set variable to current hour (military)
+    let currentHour = eval(moment().format('HH'));
+    let rowHour17 = eval($('#hour17 textarea').data('hour'));
+    // loop through each row of the class (time-block)
+     // find row time using data attribute (9<21 hours)
+     // add the past class to $(this).addClass('past')
+    if (rowHour17 < currentHour) {
+        // color set to "past" class
+        $('#hour17 #sched-text').addClass('past');
+    } else if (rowHour17 > currentHour) {
+        // color set to "present" class
+        $('#hour17 #sched-text').addClass('future');
+    } else {
+        // color set to "future" class
+        $('#hour17 #sched-text').addClass('present');
+    }
+   }
    
     // event listener----------------
     // user click save button
     $('.saveBtn').on('click', saveTask);
     init();
     // use interval to update row color
-    updateRowColor();
+    updateRowColor9();
+    updateRowColor10();
+    updateRowColor11();
+    updateRowColor12();
+    updateRowColor13();
+    updateRowColor14();
+    updateRowColor15();
+    updateRowColor16();
+    updateRowColor17();
 
 });
 
