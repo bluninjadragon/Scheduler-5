@@ -1,9 +1,20 @@
 $(document).ready(function () {
     // all your code goes here
-    // define storage array
-    let storageArray = [];
     // user click save button
     $('.saveBtn').on('click', saveTask);
+    init();
+
+    function init() {
+        $("#hour9 #sched-text").val(localStorage.getItem("data9"));
+        $("#hour10 #sched-text").val(localStorage.getItem("data10"));
+        $("#hour11 #sched-text").val(localStorage.getItem("data11"));
+        $("#hour12 #sched-text").val(localStorage.getItem("data12"));
+        $("#hour13 #sched-text").val(localStorage.getItem("data13"));
+        $("#hour14 #sched-text").val(localStorage.getItem("data14"));
+        $("#hour15 #sched-text").val(localStorage.getItem("data15"));
+        $("#hour16 #sched-text").val(localStorage.getItem("data16"));
+        $("#hour17 #sched-text").val(localStorage.getItem("data17"));
+        }
    
     function updateRowColor() {
        // set variable to current hour
@@ -14,9 +25,12 @@ $(document).ready(function () {
     function saveTask() {
         alert('saved');
         // get stuff user put in textarea
-        let schedText = $('textarea').val();
+        let value = $(this).siblings('#sched-text').val();
+        // moved the data attribute to where "this" is looking for (button element)
+            // and used it to set it as a key so that when setting item to local storage, there will be a unique key for each hour
+        let key = $(this).data('time');
         // save that to localstorage
-        localStorage.setItem("text", storageArray);
+        localStorage.setItem(key, value);   
         //show message that this was "save to local storage"
         //hide message after certain amount of time
     }
