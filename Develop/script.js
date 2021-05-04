@@ -1,6 +1,7 @@
 $(document).ready(function () {
     // all your code goes here
-
+    // define storage array
+    let storageArray = [];
     // user click save button
     $('.saveBtn').on('click', saveTask);
    
@@ -13,7 +14,9 @@ $(document).ready(function () {
     function saveTask() {
         alert('saved');
         // get stuff user put in textarea
-        //save that to localstorage
+        let schedText = $('textarea').val();
+        // save that to localstorage
+        localStorage.setItem("text", storageArray);
         //show message that this was "save to local storage"
         //hide message after certain amount of time
     }
