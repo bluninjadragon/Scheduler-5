@@ -1,10 +1,11 @@
 $(document).ready(function () {
     // all your code goes here
-    // user click save button
-    $('.saveBtn').on('click', saveTask);
-    init();
+    
 
     function init() {
+        displayDate();
+        // load data from local storage and put it in the correct row
+        // #hour-9 and use id combinations and .val to value of localstorage.keynumber'hourX';
         $("#hour9 #sched-text").val(localStorage.getItem("data9"));
         $("#hour10 #sched-text").val(localStorage.getItem("data10"));
         $("#hour11 #sched-text").val(localStorage.getItem("data11"));
@@ -15,13 +16,15 @@ $(document).ready(function () {
         $("#hour16 #sched-text").val(localStorage.getItem("data16"));
         $("#hour17 #sched-text").val(localStorage.getItem("data17"));
         }
-   
-    function updateRowColor() {
-       // set variable to current hour
-       // loop through each row of the class (time-block)
-        // find row time using data attribute (9<21 hours)
-        // add the past class to $(this).addClass('past')
-   }
+    // display current date on the page - moment (get element by ID='currentDay')
+
+    function displayDate() {
+        let timeDisplay = $('#currentDay');
+        var today = moment().format('MMMM DD, YYYY');
+        timeDisplay.text(today);
+    }
+
+
     function saveTask() {
         alert('saved');
         // get stuff user put in textarea
@@ -36,14 +39,21 @@ $(document).ready(function () {
     }
 
    //color rows based on time of day 
-   // use interval to update row color
-    updateRowColor();
+   function updateRowColor() {
+    // set variable to current hour
+    // loop through each row of the class (time-block)
+     // find row time using data attribute (9<21 hours)
+     // add the past class to $(this).addClass('past')
+}
 
-   // load data from local storage and put it in the correct row
-        // #hour-9 and textarea.textContent to value of localstorage.keynumber'hour 9;
-        // #hour-9 and textarea.textContent to value of localstorage.keynumber'hour 9;
-   // display current date on the page - moment (get element by ID)
+   
+   
+    // event listener----------------
+    // user click save button
+    $('.saveBtn').on('click', saveTask);
+    init();
+    // use interval to update row color
+    updateRowColor();
 
 });
 
-// event listener
