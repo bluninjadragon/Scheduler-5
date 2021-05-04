@@ -26,7 +26,6 @@ $(document).ready(function () {
 
 
     function saveTask() {
-        alert('saved');
         // get stuff user put in textarea
         let value = $(this).siblings('#sched-text').val();
         // moved the data attribute to where "this" is looking for (button element)
